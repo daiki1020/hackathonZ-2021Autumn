@@ -16,7 +16,8 @@ module.exports = function (server) {
         socket.broadcast.emit('enterOtherEvent', '他のクライアントが接続しました。');
 
         // メッセージ入力イベント（sendMessageEvent）を受信する
-        socket.on('', function (data) {
+        socket.on('sendMessageEvent', function (data) {
+            console.log("server");
             if (!data) {
                 return;
             }

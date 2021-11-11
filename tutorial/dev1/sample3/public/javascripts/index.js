@@ -15,10 +15,12 @@ socket.on('enterOtherEvent', function (data) {
 
 // メッセージを入力する
 function sendMessage() {
+    console.log("aa");
     const message = prompt('メッセージを入力してください。\n' +
                     'このメッセージはすべてのクライアントに送信されます。');
 
     // メッセージ入力イベント（sendMessageEvent）を送信する
+    socket.emit("sendMessageEvent", message);
 
 }
 
